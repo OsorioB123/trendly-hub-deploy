@@ -1,0 +1,6 @@
+import { jsx as _jsx, jsxs as _jsxs } from "react/jsx-runtime";
+import '../../styles/theme.css';
+const Navbar = ({ userType }) => {
+    return (_jsx("nav", { className: "navbar", children: _jsxs("div", { className: "navbar-container", children: [_jsx("div", { className: "navbar-logo", children: _jsx("h1", { children: "Trendly Hub" }) }), _jsx("div", { className: "navbar-menu", children: _jsxs("ul", { className: "navbar-links", children: [_jsx("li", { className: "navbar-item", children: _jsx("a", { href: "/education", className: "navbar-link", children: "Educa\u00E7\u00E3o" }) }), _jsx("li", { className: "navbar-item", children: _jsx("a", { href: "/calendar", className: "navbar-link", children: "Calend\u00E1rio" }) }), _jsx("li", { className: "navbar-item", children: _jsx("a", { href: "/todos", className: "navbar-link", children: "To-Dos" }) }), _jsx("li", { className: "navbar-item", children: _jsx("a", { href: "/invoices", className: "navbar-link", children: "Faturas" }) })] }) }), _jsxs("div", { className: "navbar-profile", children: [_jsx("span", { className: "profile-badge", children: userType === 'admin' ? 'Admin' : 'Cliente' }), _jsx("div", { className: "profile-avatar" })] })] }) }));
+};
+export default Navbar;

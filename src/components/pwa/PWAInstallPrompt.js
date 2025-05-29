@@ -1,0 +1,6 @@
+import { jsx as _jsx, jsxs as _jsxs } from "react/jsx-runtime";
+import '../../styles/theme.css';
+const PWAInstallPrompt = ({ onInstall, onDismiss }) => {
+    return (_jsx("div", { className: "pwa-install-prompt", children: _jsxs("div", { className: "prompt-content", children: [_jsx("div", { className: "prompt-icon", children: _jsxs("svg", { width: "24", height: "24", viewBox: "0 0 24 24", fill: "none", xmlns: "http://www.w3.org/2000/svg", children: [_jsx("path", { d: "M12 2L2 7L12 12L22 7L12 2Z", stroke: "currentColor", strokeWidth: "2", strokeLinecap: "round", strokeLinejoin: "round" }), _jsx("path", { d: "M2 17L12 22L22 17", stroke: "currentColor", strokeWidth: "2", strokeLinecap: "round", strokeLinejoin: "round" }), _jsx("path", { d: "M2 12L12 17L22 12", stroke: "currentColor", strokeWidth: "2", strokeLinecap: "round", strokeLinejoin: "round" })] }) }), _jsxs("div", { className: "prompt-text", children: [_jsx("h3", { children: "Instale o Trendly Hub" }), _jsx("p", { children: "Adicione \u00E0 tela inicial para acesso r\u00E1pido e recursos offline" })] }), _jsxs("div", { className: "prompt-actions", children: [_jsx("button", { className: "btn btn-ghost", onClick: onDismiss, children: "Agora n\u00E3o" }), _jsx("button", { className: "btn btn-primary", onClick: onInstall, children: "Instalar" })] })] }) }));
+};
+export default PWAInstallPrompt;

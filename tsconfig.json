@@ -1,18 +1,26 @@
 {
-  "files": [],
-  "references": [
-    {
-      "path": "./tsconfig.app.json"
-    },
-    {
-      "path": "./tsconfig.node.json"
-    }
-  ],
   "compilerOptions": {
-    "baseUrl": ".",
+    "target": "ESNext",                        // para output moderno
+    "module": "ESNext",                        // usa módulos ES
+    "lib": ["DOM", "DOM.Iterable", "ESNext"],  // tipos de runtime
+    "jsx": "react-jsx",                        // habilita JSX em .tsx
+    "strict": true,                            // todas as checagens estritas
+    "moduleResolution": "node",                // resolver imports como Node
+    "esModuleInterop": true,                   // resolve TS1192
+    "allowSyntheticDefaultImports": true,      // resolve imports default
+    "resolveJsonModule": true,                 // permite importar .json
+    "isolatedModules": true,                   // para Vite/ESBuild
+    "skipLibCheck": true,                      // ignora checagem de node_modules
+    "forceConsistentCasingInFileNames": true,  // previne erros de case
+    "baseUrl": ".",                            // para paths abaixo
     "paths": {
-      "@/*": ["./src/*"]
+      "@/*": ["src/*"]                         // atalho de imports
     }
-  }
+  },
+  "include": [
+    "src",
+    "tsconfig.app.json",
+    "tsconfig.node.json"
+  ],
+  "exclude": ["node_modules", "dist"]
 }
-
